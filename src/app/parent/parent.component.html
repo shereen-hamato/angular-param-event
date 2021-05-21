@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div fxFlex fxLayout="column" >
+    <div fxLayout="raw" style="margin-left: 40%">
+      <app-child1 [books]="list" (selectedBook)="onBookSelection($event)"></app-child1>
+    </div>
+    <div fxLayout="raw" style="margin-left: 20%; margin-right: 20%; margin-top: 20px">
+      <app-child2 [book]="selectedBook"></app-child2>
+    </div>
+  </div>
+
+
+

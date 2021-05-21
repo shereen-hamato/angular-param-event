@@ -1,0 +1,17 @@
+<div >
+  <mat-form-field class="example-full-width">
+    <mat-label>Book</mat-label>
+    <input type="text"
+           placeholder="Select a Book"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" (opened)="opened($event)" (optionSelected)="selection($event)" [displayWith]="displayWithFn">
+      <mat-option *ngFor="let book of books" [value]="book">
+        {{book.title}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+
+

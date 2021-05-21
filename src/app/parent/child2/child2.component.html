@@ -1,0 +1,41 @@
+<style>
+  body {
+    margin: 25px;
+  }
+
+  div.polaroid {
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+
+</style>
+<div *ngIf="book" >
+  <div class="polaroid" fxFlex fxLayout="raw">
+    <div fxFlex fxLayout="column">
+      <img class="images" src={{book.img}} alt="5 Terre">
+    </div>
+    <div class="container" fxFlex fxLayout="column">
+      <div>
+        <h2>
+          {{book.title}}
+        </h2>
+      </div>
+      <div>
+        {{book.description}}
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
